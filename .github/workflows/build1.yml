@@ -26,8 +26,8 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run build
-    - name: Download a Build Artifact
-      uses: actions/download-artifact@v3.0.0
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.0.0
       with:
-        name: a
-        path: build/*.exe
+        name: test
+        path: build\*
